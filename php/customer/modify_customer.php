@@ -28,7 +28,12 @@ $customer = mysqli_fetch_assoc($get_customer_result);
         Direccion: <input type="text" name="adress" value=<?php echo $customer['adress'];?>>
         <br>
 
-        Ciudad: <input type="text" name="city" value=<?php echo $customer['city'];?>>
+        Ciudad: <select name="city" id="city">
+            <option value="">--seleccione una ciudad--</option>
+            <option value="ushuaia">ushuaia</option>
+            <option value="rio grande">rio grande</option>
+            <option value="tolhuin">tolhuin</option>
+        </select>
         <br>
 
         <button type="submit">Enviar</button>

@@ -17,11 +17,11 @@ $result_update_sql = mysqli_query($conexion, $update_sql);
 if ($result_update_sql) {
     echo "El cliente ha modificado con exito";
     echo "<br></br>";
-    echo "<a href='../../menu.html'>Volver al menú</a>";
+    echo "<a href='../customer/list_customers.php'>Volver al listado</a>";
 }else{
     echo "ERROR.". mysqli_error($conexion);
     echo "<br></br>";
-    echo "<a href='../../menu.html'>Volver al menú</a>";
+    echo "<a href='../customer/list_customers.php'>Volver al listado</a>";
 }
 
 ?>
