@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register supplier</title>
+</head>
+<body>
+    <form action="../php/supplier/process_supplier_registration.php" method="POST">
+        <label for="brand">Marca:</label>
+        <input type="text" id="brand" name="brand">
+        <br>
+
+        <label for="adress">Dirección:</label>
+        <input type="text" id="adress" name="adress">
+        <br>
+
+        <label for="quality">Calidad:</label>
+        <select name="quality" id="quality">
+            <option value="">--seleccione una opcion--</option>
+            <option value="alta">alta</option>
+            <option value="media">media</option>
+            <option value="baja">baja</option>
+        </select>
+        <br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
