@@ -33,8 +33,8 @@ $get_sql_result = mysqli_query($conexion, $get_sql);
                         <td><?= $product['stock'] ?></td>
                         <td><?= $product['supplier_id'] ?></td>
                         <td>
-                            <a href="../product/modify_product.php?product_id=<?php echo $product['product_id']?>">MODIFICAR</a>
-                            <a href="../product/delete_product.php?product_id=<?php echo $product['product_id']?>">ELIMINAR</a>
+                            <a href="../product/modify_product.php?product_id=<?php echo $product['product_id']; ?>">MODIFICAR</a>
+                            <a href="../product/delete_product.php?product_id=<?php echo $product['product_id']; ?>">ELIMINAR</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>

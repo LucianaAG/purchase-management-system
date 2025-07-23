@@ -30,15 +30,21 @@ $product = mysqli_fetch_assoc($get_sql_result);
         Precio: <input type="number" name="price" value=<?php echo $product['price']; ?>>
         <br>
 
-        Categoria: <input type="text" name="category" value=<?php echo $product['category']; ?>>
+        Categoria: <select name="category" id="category">
+            <option value="">--seleccione una opcion--</option>
+            <option value="computacion">computacion</option>
+            <option value="deporte">deporte</option>
+            <option value="mueble">mueble</option>
+            <option value="libreria">libreria</option>
+        </select>
         <br>
 
-        Stock: <input type="text" name="stock" value=<?php echo $product['stock']; ?>>
+        Stock: <input type="text" name="stock" min=1 value=<?php echo $product['stock']; ?>>
         <br>
 
         Proveedor <select name="supplier_id" id="supplier_id">
             <option value="">--seleccione una opcion--</option>
-            <?php while($supplier = mysqli_fetch_assoc($get_suppliers_sql_result)): 
+            <?php while($supplier = mysqli_fetch_assoc($get_suppliers_sql_result)):
                 echo "<option value='{$supplier['supplier_id']}'>{$supplier['brand']}</option>";
             ?>
             <?php endwhile; ?>
