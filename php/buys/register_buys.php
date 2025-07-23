@@ -31,7 +31,7 @@ $get_customers_sql_result = mysqli_query($conexion, $get_customers_sql);
         <select name="customer_id" id="customer_id">
             <option value="">--seleccione un cliente asociado--</option>
             <?php while($customer = mysqli_fetch_assoc($get_customers_sql_result)): 
-                echo "<option value='{$customer['customer_id']}'>{$customer['customer_name']}</option>";    
+                echo "<option value='{$customer['customer_id']}'>{$customer['customer_name']}</option>";
                 
             ?>
             <?php endwhile; ?>
