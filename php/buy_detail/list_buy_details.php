@@ -14,7 +14,7 @@ $get_buy_details_result = mysqli_query($conexion, $get_buy_details);
     <title>Buy details list</title>
 </head>
 <body>
-    <?php if(mysqli_num_rows($get_buy_details_result) > 1): ?>
+    <?php if(mysqli_num_rows($get_buy_details_result) > 0): ?>
         <table border="1">
             <thead>
                 <th>Compra asociada</th>
@@ -30,7 +30,7 @@ $get_buy_details_result = mysqli_query($conexion, $get_buy_details);
                         <td><?= $buy_details['amount']?> </td>
                         <td>
                             <a href="../buy_detail/modify_buy_detail.php?buy_detail_id=<?php echo $buy_details['buy_detail_id']; ?>">MODIFICAR</a>
-                            <a href="../buy_detail/delete_buy_detail.php?buy_detail_id=<?php echo $buy_details['buy_details_id']; ?>">ELIMINAR</a>
+                            <a href="../buy_detail/delete_buy_detail.php?buy_detail_id=<?php echo $buy_details['buy_detail_id']; ?>">ELIMINAR</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>

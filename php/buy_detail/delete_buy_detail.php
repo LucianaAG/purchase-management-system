@@ -3,7 +3,7 @@ include "../conexion.php";
 
 $buy_detail_id = $_GET['buy_detail_id'];
 
-$join_sql = "SELECT *.bd, total.b, price.p
+$join_sql = "SELECT bd.*, b.total, p.price
             FROM buy_detail bd
             INNER JOIN product p ON bd.product_id = p.product_id
             INNER JOIN buys b ON bd.buy_id = b.buy_id";

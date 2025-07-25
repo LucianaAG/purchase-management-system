@@ -28,11 +28,14 @@ if ($buy['payment_method'] == 'tarjeta') {
 $update_total_buy_sql = "UPDATE buys SET total = $final_price";
 $update_total_buy_sql_result = mysqli_query($conexion, $update_total_buy_sql);
 
-if ($product['stock'] > 0) {
+if ($product['stock'] >= $amount) {
     $insert_sql = "INSERT INTO buy_detail (product_id, buy_id, amount) VALUES ('$product_id', '$buy_id', '$amount')";
     $insert_sql_result = mysqli_query($conexion, $insert_sql);
 
-    if ($insert_sql_result) {
+    $update_product_stock_sql = "UPDATE product SET stock = stock - $amount WHERE product_id = '$product_id'";
+    $update_product_stock_sql_result = mysqli_query($conexion, $update_product_stock_sql);
+
+    if ($insert_sql_result && $update_product_stock_sql_result) {
         echo "La compra se ha realizado con exito";
         echo "<br>";
         echo "<a href='../../menu.html'>Volver al menú</a>";
@@ -43,7 +46,7 @@ if ($product['stock'] > 0) {
     }
 
 }else{
-    echo "No se puede realizar la compra, porque no hy stock disponible";
+    echo "No se puede realizar la compra, porque no hay stock disponible";
     echo "<br>";
     echo "<a href='../../menu.html'>Volver al menú</a>";
 }
