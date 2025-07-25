@@ -2,7 +2,7 @@
 
 Aplicación web desarrollada en HTML, PHP y MySQL para la gestión de compras, productos, proveedores y clientes de una empresa que opera en las ciudades de Río Grande, Tolhuin y Ushuaia.
 
-## 🧾 Descripción
+## Descripción
 
 Este sistema permite a los administradores de la empresa registrar y gestionar:
 
@@ -18,7 +18,7 @@ También se aplican lógicas específicas como:
 - Descuento del 10% por pagos en efectivo
 - Actualización automática de stock y total de compra
 
-## 🚀 Funcionalidades principales
+## Funcionalidades principales
 
 1. ABMC de Clientes, Proveedores, Productos, Compras y Detalles de compra.
 2. Registro y validación de usuario con doble contraseña.
@@ -31,14 +31,14 @@ También se aplican lógicas específicas como:
 9. Cálculo automático del total según forma de pago.
 10. Actualización de stock en compras y devoluciones.
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - PHP
 - MySQL
 - HTML / CSS
 - XAMPP (Apache + MySQL)
 
-## ⚙️ Instalación
+## Instalación
 
 1. Clonar o descargar este repositorio.
 2. Colocar la carpeta del proyecto dentro de `htdocs/` de XAMPP.
