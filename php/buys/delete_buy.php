@@ -1,7 +1,7 @@
 <?php
 include "../conexion.php";
 
-$buy_id = $_POST['buy_id'];
+$buy_id = $_GET['buy_id'];
 
 $get_buy_detail = "SELECT * FROM buy_detail WHERE buy_id = '$buy_id'";
 $get_buy_detail_result = mysqli_query($conexion, $get_buy_detail);

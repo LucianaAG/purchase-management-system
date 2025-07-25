@@ -14,7 +14,7 @@ $get_buys_sql_result = mysqli_query($conexion, $get_buys_sql);
     <title>List buys</title>
 </head>
 <body>
-    <?php if(mysqli_num_rows($get_buys_sql_result) >= 1): ?>
+    <?php if(mysqli_num_rows($get_buys_sql_result) > 0): ?>
         <table border="1">
             <thead>
                 <th>Fecha</th>
@@ -27,12 +27,12 @@ $get_buys_sql_result = mysqli_query($conexion, $get_buys_sql);
                 <?php while($buy = mysqli_fetch_assoc($get_buys_sql_result)): ?>
                     <tr>
                         <td><?= $buy['buy_date']?></td>
-                        <td><?= $buy['method_payment']?></td>
+                        <td><?= $buy['payment_method']?></td>
                         <td><?= $buy['total']?></td>
                         <td><?= $buy['customer_id']?></td>
                         <td>
                             <a href="../buys/modify_buy.php?buy_id=<?php echo $buy['buy_id']; ?>">MODIFICAR</a>
-                            <a href="../buys/delete_buy.php=buy_id=<?php echo $buy['buy_id']; ?>">ELIMINAR</a>
+                            <a href="../buys/delete_buy.php?buy_id=<?php echo $buy['buy_id']; ?>">ELIMINAR</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>
