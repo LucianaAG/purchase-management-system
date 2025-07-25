@@ -1,6 +1,6 @@
 # Sistema de Gestión de Compras
 
-Aplicación web desarrollada en PHP, MySQL y jQuery para la gestión de compras, productos, proveedores y clientes de una empresa que opera en las ciudades de Río Grande, Tolhuin y Ushuaia.
+Aplicación web desarrollada en HTML, PHP y MySQL para la gestión de compras, productos, proveedores y clientes de una empresa que opera en las ciudades de Río Grande, Tolhuin y Ushuaia.
 
 ## 🧾 Descripción
 
