@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product form by category</title>
+</head>
+<body>
+    <form action="../php/reports/list_of_products_by_category.php" method="POST">
+        <label for="category">Categoria:</label>
+        <select name="category" id="category">
+            <option value="">--seleccione una opcion--</option>
+            <option value="computacion">computacion</option>
+            <option value="deporte">deporte</option>
+            <option value="muebles">muebles</option>
+            <option value="libreria">libreria</option>
+        </select>
+        <br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
